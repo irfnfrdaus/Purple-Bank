@@ -1,0 +1,21 @@
+[Unit]
+Description=Purple Bank FYP private demo
+After=network.target
+
+[Service]
+Type=simple
+# Replace BOTH account/path placeholders before installing. Use the Ubuntu user's checkout.
+User=REPLACE_UBUNTU_USER
+WorkingDirectory=/home/REPLACE_UBUNTU_USER/Purple-Bank
+Environment=PURPLE_HOST=127.0.0.1
+Environment=PURPLE_PORT=8000
+Environment=PYTHONUNBUFFERED=1
+UMask=0077
+ExecStart=/bin/bash /home/REPLACE_UBUNTU_USER/Purple-Bank/scripts/start.sh
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

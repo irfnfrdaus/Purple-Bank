@@ -1,0 +1,46 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'my.edu.purplebank'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'my.edu.purplebank'
+        minSdk 26
+        targetSdk 35
+        versionCode 6
+        versionName '2.2.2'
+        buildConfigField 'String', 'WEB_PORTAL_URL', groovy.json.JsonOutput.toJson(System.getenv('PURPLE_WEB_PORTAL_URL') ?: '')
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    buildFeatures { buildConfig true }
+    testOptions {
+        unitTests.includeAndroidResources = true
+        unitTests.all { maxHeapSize = '512m' }
+    }
+    signingConfigs {
+        stableRelease {
+            if (System.getenv('PURPLE_SIGNING_KEYSTORE')) {
+                storeFile file(System.getenv('PURPLE_SIGNING_KEYSTORE'))
+                storePassword System.getenv('PURPLE_SIGNING_PASSWORD')
+                keyAlias 'purplebank'
+                keyPassword System.getenv('PURPLE_SIGNING_PASSWORD')
+            }
+        }
+    }
+    buildTypes {
+        debug { applicationIdSuffix '.demo' }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.stableRelease
+        }
+    }
+    lint { abortOnError true; checkReleaseBuilds true }
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.robolectric:robolectric:4.16.1'
+}

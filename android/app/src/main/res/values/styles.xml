@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#7047E8</item>
+        <item name="android:statusBarColor">#7047E8</item>
+        <item name="android:navigationBarColor">#27223D</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+    <string name="app_name">Purple Bank · FYP</string>
+    <string name="error_credentials">Enter email and password.</string>
+    <string name="loading_connect">Connecting…</string>
+    <string name="loading_risk">Assessing risk…</string>
+    <string name="demo_email" translatable="false">irfan@purple.demo</string>
+    <string name="demo_password" translatable="false">PurpleDemo!2026</string>
+    <string name="pin_unmeasured_click">Press and release each digit so its duration can be measured. Automated clicks are not scored.</string>
+    <string name="pin_loading">Checking measured timings…</string>
+    <string name="pin_backend_invalid">The service response is invalid. Try again.</string>
+    <string name="pin_evaluated">6 / 6 digits checked</string>
+</resources>

@@ -1,0 +1,14 @@
+.pin-layout{max-width:1100px;margin:0 auto;padding:48px 24px;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start}
+.pin-back{display:inline-block;color:#6e47eb;margin-bottom:38px;text-decoration:none;font-weight:600}
+.pin-intro h1{font-size:clamp(34px,5vw,60px);line-height:1.12;letter-spacing:-2px;margin:18px 0 22px}
+.pin-intro h1 em{color:#6e47eb;font-style:normal}.pin-intro p,.pin-intro li{line-height:1.75}.pin-intro ol{padding-left:22px;margin:24px 0}.pin-intro li{margin-bottom:12px}
+.pin-intro .notice{align-items:start}.pin-intro .notice p{margin:8px 0 0}
+.pin-card{padding:30px}.pin-card h2{margin:12px 0}.pin-card>p{line-height:1.65}.pin-card select{width:100%;margin:8px 0 10px}
+.pin-progress{text-align:center;font-size:20px;font-weight:650;letter-spacing:2px;padding:20px 8px}
+.pin-keypad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.pin-keypad button{min-height:64px;border:1px solid #ded8f2;border-radius:16px;background:#f6f3ff;color:#372263;font-family:inherit;font-size:25px;font-weight:600;cursor:pointer;touch-action:none;user-select:none;-webkit-user-select:none}
+.pin-keypad button:focus-visible{outline:3px solid #6e47eb;outline-offset:2px}.pin-keypad button:active,.pin-keypad button.pressed{background:#dcd2ff}.pin-keypad button:disabled{opacity:.45;cursor:default}#pin-submit{background:#6e47eb;color:#fff}
+.pin-result{margin-top:18px}.pin-result:empty{display:none}.pin-verdict{padding:16px;border-radius:14px;background:#edf9f0;color:#165f35}.pin-verdict.amber{background:#fff6df;color:#785100}.pin-verdict.red{background:#fff0f1;color:#9b2438}.pin-verdict h3{font-size:18px;margin:0 0 8px}.pin-verdict p{margin:0;line-height:1.6}
+.pin-values{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}.pin-values div{padding:12px;border-radius:10px;background:#f6f3ff}.pin-values small{display:block;color:#6a637a;margin-bottom:6px}.pin-values strong{font-size:17px}
+.pin-disclosure{font-size:12px;color:#6a637a;line-height:1.6}.pin-result button{margin-top:10px}
+@media(max-width:760px){.pin-layout{grid-template-columns:1fr;gap:24px;padding:24px 16px}.pin-back{margin-bottom:24px}.pin-intro h1{letter-spacing:-1px}.pin-card{padding:22px}.pin-keypad button{min-height:60px}}

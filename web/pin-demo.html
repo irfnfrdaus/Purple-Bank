@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6e47eb">
+  <title>Purple Bank · PIN rhythm practice</title>
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/style.css">
+  <link rel="stylesheet" href="/assets/pin-demo.css">
+  <script src="/assets/pin-rhythm.js" defer></script>
+  <script src="/assets/pin-demo.js" defer></script>
+</head>
+<body>
+  <div class="research-bar">PIN RHYTHM PRACTICE · GENERATED REFERENCE DATA · NOT IDENTITY VERIFICATION</div>
+  <main class="pin-layout">
+    <section class="pin-intro">
+      <a class="pin-back" href="/">← Back to Purple Bank</a>
+      <div class="eyebrow">MEASURED INTERACTION / REFERENCE MODEL</div>
+      <h1>Same PIN.<br><em>Different rhythm.</em></h1>
+      <p>Compare press duration and pauses between digits. Both people use the same PIN and model; results come from measured key timings.</p>
+      <ol>
+        <li>First person: enter six digits at a normal, steady pace.</li>
+        <li>Second person: enter the same PIN, pausing about one second between digits.</li>
+        <li>Compare the measurements and scores. You can use the same phone or different phones.</li>
+      </ol>
+      <div class="notice"><div><strong>No personal enrolment is used.</strong><p>The reference data is generated with a median press duration of 110 ms and pause of 200 ms. The model compares timing with that reference. A slow owner may be flagged; someone else with a similar rhythm may pass.</p></div></div>
+      <p class="small muted">This exercise uses two timing features only. It does not add screen pressure, accelerometer or gyroscope readings. It does not open a bank session, lock an account or transfer funds.</p>
+    </section>
+    <section class="card pin-card" aria-labelledby="pin-title">
+      <div class="eyebrow">PIN ENTRY PRACTICE</div>
+      <h2 id="pin-title">Enter the practice PIN</h2>
+      <p>Public practice PIN: <strong>246810</strong><br>Press and release each digit. Number keys on a physical keyboard are also supported.</p>
+      <label for="pin-model">Reference model</label>
+      <select id="pin-model"><option value="isolation_forest">Isolation Forest</option><option value="one_class_svm">One-Class SVM</option></select>
+      <div id="pin-progress" class="pin-progress" role="status" aria-live="polite">0 / 6 digits recorded</div>
+      <div class="pin-keypad" aria-label="Practice PIN keypad">
+        <button type="button" data-digit="1">1</button><button type="button" data-digit="2">2</button><button type="button" data-digit="3">3</button>
+        <button type="button" data-digit="4">4</button><button type="button" data-digit="5">5</button><button type="button" data-digit="6">6</button>
+        <button type="button" data-digit="7">7</button><button type="button" data-digit="8">8</button><button type="button" data-digit="9">9</button>
+        <button type="button" id="pin-reset" aria-label="Clear PIN">↺</button><button type="button" data-digit="0">0</button><button type="button" id="pin-submit" aria-label="Check PIN rhythm" disabled>→</button>
+      </div>
+      <p id="pin-error" class="form-error" role="alert"></p>
+      <div id="pin-result" class="pin-result" role="status" aria-live="polite"></div>
+      <p class="small muted">The browser checks the practice digits locally. The server receives six relative timing pairs without digits, identity or phone ID. This exercise does not store the timings. Use the practice PIN shown above.</p>
+    </section>
+  </main>
+</body>
+</html>

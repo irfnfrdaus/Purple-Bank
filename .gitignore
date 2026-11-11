@@ -1,0 +1,40 @@
+# Android / Gradle generated files
+.gradle/
+**/.gradle/
+**/build/
+local.properties
+**/local.properties
+*.iml
+.idea/
+*.log
+
+# Signing keys and local secrets
+.signing/
+**/.signing/
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+*.pass
+.env
+.env.*
+*.secret
+*.secrets
+
+# Runtime caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+
+# Local development and generated ML artifacts
+.venv/
+.runtime/
+.pytest_cache/
+.ruff_cache/
+.coverage
+*.apk
+*.aab
+android/.gradle-home/
